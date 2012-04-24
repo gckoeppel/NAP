@@ -1,0 +1,261 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass[10pt,oneside,a4paper,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel,varioref}
+\usepackage{amssymb}
+\usepackage{a4wide}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+%\usepackage{tikzpicture}
+
+\title{Laborjournal NAP}
+\author{Damian Köppel, Gian Claudio Köppel}
+\begin{document}
+
+\maketitle
+
+\section{Ionentauscher}
+
+\subsection{Spühlen des Ionentauschers}
+
+Zu Beginn lassen wir die noch in den Tauschern vorhandene Flüssigkeit ab.
+Vermutlich handelt es sich dabei um deionisertes Wasser, aber wir können uns
+nicht sicher sein. Dabei achten wir darauf, dass die Tauscher nie an die Luft
+kommen. Luftblasen die allenfalls im Tauscher eingeschlossen werden,
+könnten den gesamten Ionentauscherprozess beeinflussen. Danach spülen wir die
+Tauscher mit deionisiertem Wasser, bis das Wasser das aus den Tauschern fliesst
+den selben pH-Wert wie das Deioniserte Wasser hat, das in den Tauscher gegeben
+wird. Damit stellen wir sicher, dass sich keine unbekannte Stoffe mehr im
+Tauscher befinden. Der pH-Wert wird mittels Messtreifen besstimmt, in unserem
+Fall beträgt der pH-Wert des Wassers 6. Nach der Spühlung hat die Flüssigkeit
+aus beiden Tauschern den pH-Wert 6.
+
+\subsection{Kalibration der pH-Messgeräten}
+Wir kalibirieren das pH-Meter vom Typ \textit{Methrom 827 PH Lab} mit
+einer dreipunkte Kalibration. Wir verwenden dazu Pufferlösungen
+mit den pH-Werten 4, 7 und 10. Vor der Kalibration und bei jedem Wechsel der
+Puffer spülen wir die Glaselektrode mit deionisiertem Wasser, um
+Verunreinigungen, die das Messergebnis beeinflussen, möglichst klein zu halten.
+Die bei der Kalibration gemessenen Werte können den Tabellen \ref{tab:ersteKal}
+und \ref{tab:zweiteKal} entnommen werden.
+Die zweite Kalibration wurde nötig, da die erste Kontrollmessung mit der pH 7
+Pufferlösung ausserhalb der geforderten Genauigkeit von $\pm 0.1$ lag.
+
+\begin{table}[!h]
+\caption{erste Kablibtration}
+\label{tab:ersteKal}
+\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Puffer & pH-Wert & Elketrodenspanung $\left[mV\right]$\\
+		\hline
+		4 & 3.86 &\\
+		\hline
+		7 &  & -2.3\\
+		\hline
+		10 &  & -169.4\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\caption{zweite Kalibtraion}
+\label{tab:zweiteKal}
+\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Puffer & pH-Wert & Elketrodenspanung $\left[mV\right]$\\
+		\hline
+		4 &  & 172.8\\
+		\hline
+		7 & 7.09& -2.7635\\
+		\hline
+		10 &  & -168.1\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{figure}[!h]
+	\centering
+	\input{diagramm/pHKalibration}
+	\caption{Kalibration der pH-Messung}
+	\label{fig:pHKalibration}
+\end{figure}
+
+Durch die Lineare Regression konnten wir eine Gleichung für
+$Leitf"ahigkeit=f(pH\ Wert)$ herleiten:
+$$Leitf"ahigkeit = -56.81*(pH\ Wert)+400.06$$\\
+Beziehungsweise:
+$$pH\ Wert =  -\frac{Leitf"ahigkeit-400.06}{56.81}$$
+Bei einem pH Wert von 4.8 ergibt das also eine Leitfähigkeit von 127.34.
+
+\subsection{Regeneration der Ionentauscher}
+Um die volle Funktion der Ionentauschern garantieren zu können, müssen diese
+regeneriert werden. Den Kationentauscher wird mit $80 ml$ 8\%
+$HCl$-Lösung regeneriert. Der Anionentauscher wird mit $80 ml$  0.5 M
+$NaOH$-Lösung regeneriert. Die Regenerationslösungen lassen wir mit einer
+Geschwindigkeit von ungefähr 2 Tropfen pro Sekunden durch die Tauscher.
+
+Danach spühlen wir die Tauscher wieder mit deionierstem Wasser.
+Um den Spühlvorgang überwachen zu können, überprüfen wir laufend den pH-Wert
+mittels Messstreifen. Ein Ionentauscher gilt als gespühlt wenn der pH-Wert der
+Spühlflüssigkeit vor dem Spühlen und danach übereinstimmen. Die Messewerte können
+ der Tabelle \ref{spuehl} entnommen werden. Die Spühlflüssigkeit weist
+einen pH-Wert von 6 auf. Auch bei der Spühlung verwenden wir eine
+Ablassgeschwindigkeit von ca. 2 Tropfen pro Sekunde.
+
+\begin{table}[h]
+\caption{Messungen zur Überwachung des Spühlvorgangs}
+\label{spuehl}
+\centering
+	\begin{tabular}{|l|l|l|}
+	\hline
+	Spühlwasser $\left[ml\right]$ & Anionentauscher $\left[pH\right]$ &
+	Kathionentauscher $\left[pH\right]$\\
+	\hline
+	0 & 12 & 1 \\
+	\hline
+	170 & 11 & 1.5 \\
+	\hline
+	270 & 8 & 3 \\
+	\hline
+	300 & 7 & 3\\
+	\hline
+	350 & 6 & 4\\
+	\hline
+	400 & & 6 \\ 
+	\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Kationentausch}
+\label{sec:kat}
+Durch den Kationentauscher lassen wir $2 \cdot 80 ml$ $CaCl_2$ Prüflösung mit
+einer Tropfgeschwindikgeit von 2 Tropfen pro Sekunde laufen und verwerfen diese.
+Danach lassen wir $3 \cdot 80 ml$ Prüflösung durch den Tauscher mit der selben
+Geschwindigkeit wie die verworfene Lösung laufen. Diese zweite Tranche
+der teilentioniserten Lösung fangen wir in einem sauberen $500 ml$ Gefäss zur
+weiterverwendung auf. Gemäss Versuchsanleitung wäre hier ein $300 ml$ Gefäss
+verlangt, allerdings war kein sauberes solches Vorhanden. $20 ml$ der erhalten
+Lösung stellen wir für Messungen beiseite.
+
+\subsection{Anionentausch}
+Die beim \ref{sec:kat} Kationentausch erhaltene $Ca^+$-Freie Lösung wird jetzt
+durch den Anionentauscher geschickt. Dies machen wir wieder in zwei
+Tranchen, von denen wir die Erste verwerfen. Entgegen der
+Versuchsanleitung bestand unsere erste Tranche aus $140 ml$ anstelle von $160ml$ da wir $20 ml $ für Messungen
+beiseite Gestellt haben. Die Zweite Tranche von $80 ml$ vollentsalzter
+Probelösung fangen wir in einem sauberen $100ml$
+Becherglas auf.
+
+\subsection{Messergebnisse}
+Folgene Ergebinsse ergaben sich bei der Auswertung der Versuche.
+
+\subsubsection{pH-Messung}
+Die pH-Werte messen wir mit einem Glaselektrodenmessgerät vom Typ
+\textit{Metrohm 827 PH Lab}. Um die für die Messung notwendige Leitfähigkeit zu
+erreichen haben wir die vollentsalzte Lösung mit $NaCl$ aufgesalzen.
+
+\begin{table}[h]
+\caption{pH-Werte}
+\label{tab:pHMess}
+\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Lösung & pH-Wert & Elektrodenspannung $\left[mV\right]$ \\
+		\hline
+		$CaCl_{2}$Probelösung & 5.82 & -65 \\
+		\hline
+		$Ca^{2+}$ freie Lösung & 1.30 & 326 \\
+		\hline
+		Vollentsalzte Lösung & 8.54 & -85\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Leitfähigkeit}
+Die Leitfähigkeit der Lösungen messen wir mit einem Glaselektrodenmessgerärt vom
+Typ \textit{Metrohm 712 Conductometer}.
+
+\begin{table}[h]
+\caption{Leitfähigkeit}
+\label{tab:leitfaehigkeit}
+\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		Lösung & Leitfähigkeit $\left[\frac{\mu s}{cm}\right]$\\
+		\hline
+		$CaCl_{2}$Probelösung & 4.874 \\
+		\hline
+		$Ca^{2+}$ freie Lösung & 17.29\\
+		\hline
+		Vollentsalzte Lösung & 18.03 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Qualitativer $Ca_{2+}$ und $Cl^{-}$Ionen}
+Die Ionen können mit folgenden Methoden nachgewiesen werden.
+\begin{itemize}
+  \item[$Ca^{2+}$] Zwei Tropfen Probelösung mit einem Tropfen $H_2SO_4$
+  versetzen. Nach 1-3 Minuten sind unter dem Mirkroskop Gipsnadeln sichtbar.
+  \item[$Cl^-$] Ein Tropfen Probelösung mti eingen Tropfen $AgNO_{3}$-Lösung
+  versetzen. Es wird ein weisser, flockiger $AgCl$-Niederschlag sichbar.
+\end{itemize}
+
+\begin{table}[h]
+\caption{Qualitativer Ionennachweis}
+\label{tab:ionenNachweis}
+\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		Lösung & $Ca^{2+}$ vorhanden & $Cl^-$ vorhanden\\
+		\hline
+		$CaCl_{2}$Probelösung & + & + \\
+		\hline
+		$Ca^{2+}$ freie Lösung & - & + \\
+		\hline
+		Vollentsalzte Lösung & - & -\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Menge gelöstes $CaCl_2$ in Probelösung}
+\label{mengecacl}
+pH-Wert Probelösung nach Kationentausch: 1.3 \newline
+Stoffmege in der Lösung:
+$c\left[H_3O^+\right]10^{-pH}=10^{-1.3}\frac{mol}{l}$\newline
+\textbf{Molmassen:}
+\begin{itemize}
+	\item $M\left( Ca \right)=40.078 u$
+	\item $M\left( CL \right)=35.45 u$
+	\item $M\left(CaCl_2\right)= 40.078+2*35.45=110.978\frac{g}{mol}$
+\end{itemize}
+
+$$Ca^{2+} \textrm{Ionen werden durch } 2 \cdot H_3O \textrm{ Ionen
+ersetzt.}$$
+$$\Rightarrow c\left[Ca^{2+}\right] = 0.5 \cdot c\left[H_3O^+\right] \Rightarrow
+c\left[Ca^{2+}\right] = 0.5 * 10^{-1.3}\frac{mol}{l}$$
+$$1\textrm{ mol }Ca^{2+} \textrm{ reagiert zu } 1\textrm{ mol }CaCl_2$$
+$$\Rightarrow Ca^{2+}+ 2Cl^- \Leftrightarrow CaCl_2 \Rightarrow
+c\left[CaCl_2\right]= c\left[Ca^{2+}\right] = 0.5 \cdot 10^{-1.3}\frac{mol}{l}$$
+$$\textrm{Konzentration } CaCl_2=0.5 \cdot
+10^{-1.3}\frac{mol}{l}\cdot 110.978 \frac{g}{mol}= 2.78 \frac{g}{l}$$
+
+\subsection{Interpretation}
+Wie wir in der Tabelle \ref{tab:ionenNachweis} aufgezeigt haben, konnten wir
+beim vollentsalzten Wasser keine $Ca^{2+}$ oder $Cl^-$ Ionen nachweisen. Damit
+können wir davon ausgehen das die Vollentsalzung funktioniert hat. Da wir keine
+$Ca^{2+}$ Ionen nachweisen konnten, können wir davon ausgehen, dass das Wasser
+voll enthärtet wurde.\\
+Die bei \ref{mengecacl} berechnete Masse von $2.78\frac{g}{l}$ $CaCL_2$ Ionen
+erscheint uns, basierend auf unseren Chemiekenntnissen, einigermassen
+realistisch.\\
+Bei keinem der Messwerte sind uns bemerkenswerte Abweichungen von den
+Theoriewerten aufgefallen.
+
+\end{document}

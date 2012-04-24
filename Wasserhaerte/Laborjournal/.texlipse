@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Tue Apr 17 11:59:22 CEST 2012
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=Wasserhaerte.tex
+outputFile=Wasserhaerte.pdf
+langSpell=de
+markDer=true
+srcDir=

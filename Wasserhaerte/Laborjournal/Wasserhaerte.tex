@@ -1,0 +1,329 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass[10pt,oneside,a4paper,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel,varioref}
+\usepackage{amssymb}
+\usepackage{a4wide}
+
+\usepackage{multicol}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage[numbered]{mcode}
+%\usepackage{tikzpicture}
+
+\title{Laborjournal NAP}
+\author{Damian Köppel, Gian Claudio Köppel, Gruppe 1402}
+\begin{document}
+
+\maketitle
+
+\section{Härtebestimmung}
+\subsection{Probewasserentnahme}
+Als erstes spühlen wir die Wasserleitungen, damit wir frisches Wasser entnehmen
+konnten, da bei abgestandenem Wasser andere Werte gemessen werden könnten. Dazu
+öffnen wir die wir die beiden Handventile und lassen mithilfe der Wasseruhr
+ca 20 Liter in den Abguss fliessen.
+
+\begin{table}[!h]
+\caption{Stand der Wasseruhr}
+\label{tab:standWasseruhr}
+\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Zähler & links [$m^3$] & rechts [$m^3$] \\
+		\hline
+		Vor spülen & 61.4277 & 86.2430 \\
+		\hline
+		Nach spülen & 61.4510 & 86.2655 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Danach spülen wir die Probenahmgefässe mit dem jeweiligen Probewasser. Dabei
+haben wir auch den Hahn zur Probewasserentnahme gespühlt. Wir entnehmen je ca.
+2 Liter der drei Probeflüssigkeiten. Diese sind Britawasser, Kalkexwasser und
+Leitungswasser.
+
+\subsection{Kochen des Probewassers}
+Je 200ml von jedem Probewasser geben wir zusammen mit 2 Siedesteinchen in
+Erlenmayerkolben mit Schliff. Diese stellten wir auf den Kocher und lassen sie
+während einer Stunde kochen.
+
+\begin{table}[!h]
+\caption{Kochzeiten}
+\label{tab:kochzeiten}
+\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Flüssigkeit & Startzeit & Endzeit \\
+		\hline
+		Kalkexwasser & 13:43 & 14:43 \\
+		\hline
+		Leitungswasser & 13:45 & 14:45 \\
+		\hline
+		Brittawasser & 13.45 & 14:45 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Nach dem Kochen stellen wir bei Leitungswasser und Kalkexwasser weisse
+Ausfällungen fest, die sich im Erlenmeyerkolben absetzten. Quantitativ sind die
+Ausfällungen sowohl beim Leitungswasser als auch beim Kalkexwasser gleich gross.
+Beim Brittawasser können wir keine Ausfällungen feststellen.
+Nach dem Kochen lassen wir die Flüssigkeiten etwas abkühlen, verschliessen
+sie mit einem Stopfen und kühlen sie im Wasserbad vollständig ab. Danach filtern
+wir die Flüssigkeiten.
+
+\subsection{Hydrogenkarbonatbestimmung durch Neutralisation mit Salzsäure}
+Mit einer Vollpipette entnahmen wir von jeder der drei Probeflüssigkeiten und
+den drei gekochten Probeflüssigkeiten 100ml und geben diese in Erlenmeyerkolben.
+Zwischen allen Entnahmen spühlten wir die Vollpipette mit deionisiertem Wasser, um eine Verfälschung der
+Messergebnisse zu verhindern. Zu jeder Probe fügen wir 2 Tropfen
+Eriochromschwarz als Mischindikator und einen Rührmagneten. Danach titrieren
+wir Salzsäure bis zum Farbumschlag von blaugrün nach hellrosa. Die Salzsäure hat eine Konzentration
+von 0.1mol/l. Bis zum Farbumschlag verwenden wir folgende Mengen:
+
+\begin{table}[!h]
+\caption{HCl-Lösung}
+\label{tab:hcl}
+\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		Flüssigkeit & Menge [ml] \\
+		\hline
+		Kalkexwasser & 6.738 \\
+		\hline
+		Kalkexwasser, gekocht & 0.932 \\
+		\hline
+		Leitungswasser &  6.674 \\
+		\hline
+		Leitungswasser, gekocht & 1.012 \\
+		\hline
+		Brittawasser & 2.346 \\
+		\hline
+		Brittawasser, gekocht & 1.25 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Komplexometrische Härtebestimmung}
+Von jeder der Probeflüssigkeiten entnehmen wir mit einer Vollpipette 50ml und
+geben diese in ein Glas des Titrierautomaten. Jede der Proben versetzen wir mit
+10ml Pufferlösung und 1ml Eriochromschwarz-Lösung. Das Glas befestigen wir am
+Titrierautomaten und starten der Messung. Der Automat gibt der Flüssigkeit
+EDTA-Lösung hinzu. Die Konzentration der EDTA-Lösung ist
+$c(Na_2-EDTA\cdot2H_2O)=0.1mol/l$ Wir stellen folgenden Verbrauch fest:
+
+\begin{table}[!h]
+\caption{EDTA-Verbrauch}
+\label{tab:edtaverbrauch}
+\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		Flüssigkeit & Menge [ml] \\
+		\hline
+		Kalkexwasser & 1.775 \\
+		\hline
+		Kalkexwasser, gekocht & 0.324 \\
+		\hline
+		Leitungswasser & 1.774 \\
+		\hline
+		Leitungswasser, gekocht & 0.326 \\
+		\hline
+		Brittawasser & 0.705 \\
+		\hline
+		Brittawasser, gekocht & 0.387 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Gesamthärtebestimmung mittels Schnelltest}
+Wir tauchen den Schnelltest gemäss Anleitung auf der Verpackung in die
+Testflüssigkeit ein, schütteln sie, warten eine Minute und lesen die Werte ab.
+Dabei stellen wir folgende Werte fest:
+
+\begin{table}[!h]
+\caption{Schnelltest}
+\label{tab:schnelltest}
+\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		Flüssigkeit & Resultat [$^\circ$fH] \\
+		\hline
+		Kalkexwasser & $x>45$ \\
+		\hline
+		Kalkexwasser, gekocht & $9<x>18$ \\
+		\hline
+		Leitungswasser & $x>45$ \\
+		\hline
+		Leitungswasser, gekocht & $9<x>18$ \\
+		\hline
+		Brittawasser & $9<x>18$ \\
+		\hline
+		Brittawasser, gekocht & $9<x>18$ \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Beurteilung des Filterrückstandes}
+Nach dem abkochen der Probeflüssigkeiten haben wir diese gefiltert. Bei
+Kalkexwasser und Leitungswasser blieb Kalk im Filter zurück. Dieses lösen wir in
+wenig deionisiertem Wasser und betrachten es unter dem Mikroskop.
+Dabei können wir keine Unterschiede zwischen den beiden Rückständen feststellen.
+
+\subsection{Interpretation}
+Die Nichtkarbonathärte lässt sich auf zwei verschiedene Möglichkeiten bestimmen.
+Durch den Kochvorgang wird die Karbonathärte ausgefällt. Die gekochten Proben
+haben eine tiefe Karbonathärte, die Nichtkarbonathärte verändert sich aber
+während dem Kochvorgang nicht. Die andere, hier verwendete Methode ist die
+Berechnung mit der Formel:\\
+Nichtkarbonathärte = Gesamthärte - Karbonathärte verwenden.\\
+Bei unseren Messungen sind Abweichungen davon aufgetreten. Diese führen wir auf
+Messungenauigkeiten zurück.
+
+Die getätigten Messungen zeigen ganz klar dass die Wasserenthärtung mit
+Britafilter funktioniert. Wir konnten keine Ausfällungen beim Abkochen des
+Brittawassers Messen, zudem ist die Härte wesentlich tiefer als bei
+Leitungswasser. Bei Kalkexwasser hingegen stellten wir genau die gleichen
+Messwerte fest und beobachteten genau das gleiche wie beim Leitungswasser.
+Daraus schliessen wir dass die Wasserenthärtung mit dem Kalkex-Prinzip nicht
+funktioniert und daher keine Investition wert ist.
+
+
+\subsection{Berechnungsrundlagen für Härtebestimmung}
+Die Folgende Formel haben wir verwendet um die Resultate der Titration in
+Wasserhärte umzu rechnen.
+\begin{multicols}{3}
+	$$V=\textrm{Volumen}$$
+	$$c=\textrm{Konzentration}$$
+	$$n=\textrm{Stoffmenge}$$
+	$$HCO_3^-=\textrm{Hydrogenkarbonat}$$
+	$$HCl=\textrm{Salzsäure}$$
+\end{multicols}
+	\begin{figure}[!h]
+	\caption{Bestimmung der Hydogenkarbonatkonzentration}
+	\label{equ:konezantration}
+		$$c\left(HCO_3^-\right)=\frac{n\left(HCO_3^-\right)}{V\left(Probeloesung\right)}=
+		\frac{V\left(HCl\right)\cdot c \left(HCl\right)}{V\left(Probeloesung\right)}$$
+	\end{figure}
+	
+	\begin{figure}[!h]
+	\caption{Bestimmung der Karbonathärte}
+	\label{equ:karbonathaerte}
+		$$c\left(KH\right)=\frac{1}{2}c\left(HCO_3^-\right)$$
+	\end{figure}
+	
+	\begin{figure}[!h]
+	\caption{Bestimmung der Gesamthärte}
+	\label{equ:gesamthaerte}
+		$$c\left(GH\right)=\frac{n\left(GH\right)}{V\left(\textrm{Probeloesung}\right)}=\frac{V\left(EDTA\right)\cdot
+		c\left(EDTA\right)}{V\left(\textrm{Probeloesung}\right)}$$
+	\end{figure}
+	
+	\begin{figure}[!h]
+	\caption{Bestimmung der Nichtkarbonathärte}
+	\label{equ:nichtkarbonat}
+		$$c\left(NKH\right)=c\left(GH\right)-c\left(KH\right)$$
+	\end{figure}
+	\newpage
+	
+	\subsection{Resultate der Härtebestimmung}
+	\begin{table}[!h]
+	\caption{Resultate der Härtebestimmung in $\frac{mmol}{l}$}
+	\label{tab:ResultateMmol}
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline
+			$\left[\frac{mmol}{l}\right]$ & Hydrogenkarbonat & Karbonathärte &
+			Gesamthärte & Nichtkarbonathärte\\
+		\hline
+			Kalkexwasser & 6.738 & 3.369 & 3.55 & 0.181 \\
+		\hline
+			Kalkexwasser gekocht & 0.9320 & 0.466  & 0.648 & 0.182 \\
+		\hline
+			Leitungswasser & 6.674 & 3.337 & 3.548 & 0.211\\
+		\hline
+			Leitungswasser gekocht & 1.012 & 0.506 & 0.652 & 0.146\\
+		\hline
+			Brittawasser & 2.346 & 1.173 & 1.41 & 0.237 \\
+		\hline
+			Brittawasser gekocht & 1.25 & 0.625 & 0.774 & 0.149\\
+		\hline
+	\end{tabular}
+	\end{table} 
+
+		\begin{table}[!h]
+	\caption{Resultate der Härtebestimmung in $fH$}
+	\label{tab:ResultateFranz}
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+			$fH$ & Karbonathärte & Gesamthärte
+			& Nichtkarbonathärte\\
+		\hline
+			Kalkexwasser & 33.69 & 35.5 & 1.81 \\
+		\hline
+			Kalkexwasser gekocht & 4.66 & 6.48 & 1.82 \\
+		\hline
+			Leitungswasser & 33.37 & 35.48 & 2.11\\
+		\hline
+			Leitungswasser gekocht & 5.06 & 6.52 & 1.46\\
+		\hline
+			Brittawasser & 11.73 & 14.1 & 2.37 \\
+		\hline
+			Brittawasser gekocht & 6.25 & 7.74 & 1.49\\
+		\hline
+	\end{tabular}
+	\end{table} 
+
+	\begin{figure}[!h]
+	\caption{Matlab Code zur Berechnung der Wasserhärte}
+	\label{code:matlabFile}
+	\begin{lstlisting}
+		close all;
+		clear all;
+		
+		VolProbeHCL = 0.10; %l
+		VolProbeKomplex = 0.05; %l
+		
+		%Kalkex: Kalkex gekocht; Leitung; Letiung gekocht; 
+		%	Britta; Britta gekocht
+		HCLVerbauch = [6.738 0.932 6.674 1.012 2.346 1.25]; 
+		EDTAVerbauch = [ 1.775 0.324 1.774 0.326 0.705 0.387];
+		
+		StoffHCL = 0.1; %mol/l
+		StoffEDTA = 0.1; %mol/l
+		
+		%Hydogenkarbonat konzentration
+		for i=1:6
+		    cHCO(i)=(StoffHCL*HCLVerbauch(i))/VolProbeHCL;
+		end
+		
+		%Karbonathaerte
+		for i=1:6
+		    cKH(i)= 0.5*(cHCO(i));
+		end
+		
+		%Gesamthaerte
+		for i=1:6
+		    cGH(i)=(EDTAVerbauch(i)*StoffEDTA)/VolProbeKomplex;
+		end
+		
+		%Nichtkarbonathaerte
+		for i=1:6
+		    cNKH(i)=cGH(i)-cKH(i);
+		end
+		
+		disp('Kalkex, Kalkex gekocht; Leitung; 
+			Leitung gekocht; Britta; Britta gekocht')
+		cHCO
+		cKH
+		cGH
+		cNKH
+	\end{lstlisting}
+	\end{figure}
+
+
+
+
+\end{document}

@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Sat Mar 10 10:39:14 CET 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=ionentauscher.tex
+outputFile=ionentauscher.pdf
+langSpell=de
+markDer=true
+srcDir=
